@@ -1,0 +1,3 @@
+[ 2025-05-08 00:16:37,522 ] root - INFO - timestamp removed successfully
+[ 2025-05-08 00:16:37,532 ] root - INFO - data splitted into train and test : [train_size:(11799, 28), test_size:(5058, 28)]
+[ 2025-05-08 00:16:37,538 ] root - ERROR - The error occured in [C:\Users\SHIVAM GHUGE\Downloads\Mechademy Assignment\DS-Intern-Assignment-Shivam-Ghuge\src\components\data_ingestion.py] at line 37] : Cannot save file into a non-existent directory: 'DS-Intern-Assignment-Shivam-Ghuge\data\processed'
