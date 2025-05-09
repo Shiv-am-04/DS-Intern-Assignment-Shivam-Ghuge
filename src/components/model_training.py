@@ -34,18 +34,7 @@ class ModelTraining:
                 'feature_fraction' : 0.7
             }
 
-            model = LGBMRegressor(
-                boosting_type = 'rf',
-                max_depth = 8,
-                num_leaves = 15,
-                learning_rate = 0.01,
-                n_estimators = 300,
-                reg_alpha = 1,
-                reg_lambda = 1,
-                importance_type = 'gain',
-                bagging_fraction = 0.6,  
-                feature_fraction = 0.7
-                )
+            model = LGBMRegressor(**params)
 
             logging.info(f"model initialized with params : {params}")
 
