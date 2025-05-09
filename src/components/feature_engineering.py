@@ -8,7 +8,7 @@ from src.logger import logging
 
 
 class FeatureEngineering:
-    def __init__(self,train_data:str,test_data:str):
+    def __init__(self,train_data:pd.DataFrame,test_data:pd.DataFrame):
 
         try:
             self.train = train_data

@@ -5,6 +5,7 @@ import sys
 from src.components.data_ingestion import DataIngestion
 from src.components.data_preprocessing import DataPreprocessing
 from src.components.feature_engineering import FeatureEngineering
+from src.components.anomaly_detection import AnomalyDetection
 import pandas as pd
 
 # checking error handling and logging
@@ -37,10 +38,19 @@ import pandas as pd
 
 # checking feature_engineering
 
-train_ = pd.read_csv(r'DS-Intern-Assignment-Shivam-Ghuge\data\preprocessed\train.csv')
-test_ = pd.read_csv(r'DS-Intern-Assignment-Shivam-Ghuge\data\preprocessed\test.csv')
+# train_ = pd.read_csv(r'DS-Intern-Assignment-Shivam-Ghuge\data\preprocessed\train.csv')
+# test_ = pd.read_csv(r'DS-Intern-Assignment-Shivam-Ghuge\data\preprocessed\test.csv')
 
-fe = FeatureEngineering(train_,test_)
-fe.feature_handeling()
-train_data,test_data = fe.encoding_feature()
-fe.export_data(train_data,test_data)
+# fe = FeatureEngineering(train_,test_)
+# fe.feature_handeling()
+# train_data,test_data = fe.encoding_feature()
+# fe.export_data(train_data,test_data)
+
+# checking anomaly_detection
+
+train_ = pd.read_csv(r'DS-Intern-Assignment-Shivam-Ghuge\data\FE_data\train.csv')
+test_ = pd.read_csv(r'DS-Intern-Assignment-Shivam-Ghuge\data\FE_data\test.csv')
+
+ad = AnomalyDetection(train_,test_)
+ad.detect_and_remove_outliers()
+ad.export_data()
