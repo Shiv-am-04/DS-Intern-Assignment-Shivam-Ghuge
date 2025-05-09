@@ -63,4 +63,6 @@ class AnomalyDetection:
             logging.info(f"X_train,X_test,y_train and y_test data saved to {os.path.split(directory)[-1]} folder")
         except Exception as e:
             raise CustomException(e,sys)    
+    
+        return X_test,X_test,y_train,y_test
 

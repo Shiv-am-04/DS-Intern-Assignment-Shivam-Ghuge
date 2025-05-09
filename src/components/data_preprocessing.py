@@ -12,10 +12,10 @@ from src.logger import logging
 
 
 class DataPreprocessing:
-    def __init__(self,train_data_path:str,test_data_path:str):
+    def __init__(self,train_data:pd.DataFrame,test_data:pd.DataFrame):
         try:
-            self.train = pd.read_csv(train_data_path)
-            self.test = pd.read_csv(test_data_path)
+            self.train = train_data
+            self.test = test_data
             logging.info('train and test data loaded')
         except Exception as e:
             raise CustomException(e,sys)
