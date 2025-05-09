@@ -68,7 +68,7 @@ class ModelTraining:
 
     def save_model(self,model_trained):
         try:
-            directory = r'DS-Intern-Assignment-Shivam-Ghuge\artifact'
+            directory = r'DS-Intern-Assignment-Shivam-Ghuge\models'
             os.makedirs(directory,exist_ok=True)
 
             with open(os.path.join(directory,'lgbm_model.pickle'),'wb') as f:

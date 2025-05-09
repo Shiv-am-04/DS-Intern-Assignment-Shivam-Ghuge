@@ -38,9 +38,9 @@ class ModelEvaluation:
             os.makedirs(metrics_dir,exist_ok=True)
 
             with open(os.path.join(metrics_dir,'metrics.txt'),'w') as f:
-                f.write(f"root_mean_squared_error : {rmse}")
-                f.write("\n") 
-                f.write(f"mean_absolute_error : {mae}") 
+                f.write(f"root_mean_squared_error : {rmse} \n")
+                f.write(f"mean_absolute_error : {mae} \n")
+                f.write(f"r2_score : {r2}") 
             logging.info(f"metric saved to the {os.path.split(metrics_dir)[-1]}")
         except Exception as e:
             raise CustomException(e,sys)
