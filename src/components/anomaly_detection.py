@@ -55,11 +55,11 @@ class AnomalyDetection:
             y_train = self.train['equipment_energy_consumption']
             y_test = self.test['equipment_energy_consumption']
 
-            X_train.to_csv(os.path.join(directory,'X_train.csv'),header=True,index=False)
-            X_test.to_csv(os.path.join(directory,'X_test.csv'),header=True,index=False)
+            X_train.to_csv(os.path.join(directory,'X_train.csv'),index=False)
+            X_test.to_csv(os.path.join(directory,'X_test.csv'),index=False)
 
-            y_train.to_csv(os.path.join(directory,'y_train.csv'),header=True,index=False)
-            y_test.to_csv(os.path.join(directory,'y_test.csv'),header=True,index=False)
+            y_train.to_csv(os.path.join(directory,'y_train.csv'),index=False)
+            y_test.to_csv(os.path.join(directory,'y_test.csv'),index=False)
             logging.info(f"X_train,X_test,y_train and y_test data saved to {os.path.split(directory)[-1]} folder")
         except Exception as e:
             raise CustomException(e,sys)    

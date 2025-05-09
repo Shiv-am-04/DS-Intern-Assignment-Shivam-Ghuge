@@ -1,0 +1,2 @@
+root_mean_squared_error : 176.85338928355768
+mean_absolute_error : 62.927612931174124

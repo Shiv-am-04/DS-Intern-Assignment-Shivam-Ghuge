@@ -1,2 +1,0 @@
-[ 2025-05-09 23:15:01,187 ] root - INFO - Outliers removed. Original rows: 3395, Cleaned rows: 3395
-[ 2025-05-09 23:15:01,461 ] root - INFO - X_train,X_test,y_train and y_test data saved to clean_data folder

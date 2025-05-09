@@ -1,0 +1,29 @@
+[ 2025-05-10 00:40:26,535 ] matplotlib - DEBUG - matplotlib data path: C:\Users\SHIVAM GHUGE\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\mpl-data
+[ 2025-05-10 00:40:26,540 ] matplotlib - DEBUG - CONFIGDIR=C:\Users\SHIVAM GHUGE\.matplotlib
+[ 2025-05-10 00:40:26,545 ] matplotlib - DEBUG - interactive is False
+[ 2025-05-10 00:40:26,545 ] matplotlib - DEBUG - platform is win32
+[ 2025-05-10 00:40:26,770 ] root - INFO - data splitted into train and test : [train_size:(11799, 29), test_size:(5058, 29)]
+[ 2025-05-10 00:40:27,218 ] root - INFO - train and test data saved to splited folder
+[ 2025-05-10 00:40:27,347 ] root - INFO - train and test data loaded
+[ 2025-05-10 00:40:27,347 ] root - INFO - KNN imputer initialized
+[ 2025-05-10 00:40:39,781 ] root - INFO - null values replaced with KNN imputer
+[ 2025-05-10 00:40:39,792 ] root - INFO - knn imputer saved to the artifacts
+[ 2025-05-10 00:40:39,808 ] root - INFO - train and test data scaled using StandardScaler
+[ 2025-05-10 00:40:39,812 ] root - INFO - standard scaler saved to the artifacts
+[ 2025-05-10 00:40:39,820 ] root - INFO - dataframe created with scaled values
+[ 2025-05-10 00:40:40,341 ] root - INFO - train and test data preprocessed and saved to preprocessed folder
+[ 2025-05-10 00:40:40,505 ] root - INFO - converted 'timestamp' feature to datetime dataype
+[ 2025-05-10 00:40:40,511 ] root - INFO - new features : [hour,minute,day_of_week,month] created using 'timestamp' feature for both train and test dataset
+[ 2025-05-10 00:40:40,517 ] root - INFO - encoded train data
+[ 2025-05-10 00:40:40,517 ] root - INFO - columns : ['timestamp','hour','minute','day_of_week','month'] droped from train dataset
+[ 2025-05-10 00:40:40,524 ] root - INFO - encoded test data
+[ 2025-05-10 00:40:40,525 ] root - INFO - columns : ['timestamp','hour','minute','day_of_week','month'] droped from test dataset
+[ 2025-05-10 00:40:41,184 ] root - INFO - train and test data saved to FE_data folder
+[ 2025-05-10 00:40:41,356 ] root - INFO - Outliers removed. Original rows: 4350, Cleaned rows: 4350
+[ 2025-05-10 00:40:41,710 ] root - INFO - X_train,X_test,y_train and y_test data saved to clean_data folder
+[ 2025-05-10 00:40:41,826 ] root - INFO - model initialized with params : {'boosting_type': 'rf', 'max_depth': 8, 'num_leaves': 15, 'learning_rate': 0.01, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'importance_type': 'gain', 'bagging_fraction': 0.6, 'feature_fraction': 0.7}
+[ 2025-05-10 00:40:42,274 ] root - INFO - model fitted successfully
+[ 2025-05-10 00:40:42,281 ] root - INFO - model saved to artifact folder
+[ 2025-05-10 00:40:42,295 ] root - INFO - prediction done
+[ 2025-05-10 00:40:42,300 ] root - INFO - metrics calculated : ['rmse':176.85338928355768,'mae':62.927612931174124,'r2':0.0019837959199298094]
+[ 2025-05-10 00:40:42,303 ] root - INFO - metric saved to the results

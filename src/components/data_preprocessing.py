@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import sys
 import os
+import pickle
 
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import KNNImputer
@@ -36,6 +37,12 @@ class DataPreprocessing:
             self.test = pd.concat((self.test[['timestamp']].reset_index(drop=True),test_imputed),axis=1)
 
             logging.info("null values replaced with KNN imputer")
+
+            artifact_dir = r'DS-Intern-Assignment-Shivam-Ghuge\artifacts'
+            os.makedirs(artifact_dir,exist_ok=True)
+            with open(os.path.join(artifact_dir,'knn_imputer.pickle'),'wb') as f:
+                pickle.dump(imputer,f)
+            logging.info(f"knn imputer saved to the {os.path.split(artifact_dir)[-1]}")
         except Exception as e:
             raise CustomException(e,sys)
         
@@ -47,6 +54,11 @@ class DataPreprocessing:
             train_scaled = scaler.fit_transform(self.train.drop(columns=['equipment_energy_consumption','timestamp']))
             test_scaled = scaler.transform(self.test.drop(columns=['equipment_energy_consumption','timestamp']))
             logging.info("train and test data scaled using StandardScaler")
+
+            with open(os.path.join(artifact_dir,'scaler.pickle'),'wb') as f:
+                pickle.dump(scaler,f)
+            logging.info(f"standard scaler saved to the {os.path.split(artifact_dir)[-1]}")
+
         except Exception as e:
             raise CustomException(e,sys)
         

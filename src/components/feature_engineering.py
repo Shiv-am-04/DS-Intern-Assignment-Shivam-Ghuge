@@ -90,8 +90,8 @@ class FeatureEngineering:
         try:
             path = 'DS-Intern-Assignment-Shivam-Ghuge\data\FE_data'
             os.makedirs(path,exist_ok=True)
-            train.to_csv(os.path.join(path,'train.csv'),header=True,index=False)
-            test.to_csv(os.path.join(path,'test.csv'),header=True,index=False)
+            train.to_csv(os.path.join(path,'train.csv'),index=False)
+            test.to_csv(os.path.join(path,'test.csv'),index=False)
             logging.info(f"train and test data saved to {os.path.split(path)[-1]} folder")
         except Exception as e:
             raise CustomException(e,sys)

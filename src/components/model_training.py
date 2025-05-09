@@ -3,12 +3,9 @@ from src.logger import logging
 import sys
 import os
 import pickle
+import json
 
 from lightgbm import LGBMRegressor
-# from src.components.data_ingestion import DataIngestion
-# from src.components.data_preprocessing import DataPreprocessing
-# from src.components.feature_engineering import FeatureEngineering
-# from src.components.anomaly_detection import AnomalyDetection
 
 
 class ModelTraining:
@@ -37,7 +34,8 @@ class ModelTraining:
                 'feature_fraction' : 0.7
             }
 
-            model = LGBMRegressor(boosting_type = 'rf',
+            model = LGBMRegressor(
+                boosting_type = 'rf',
                 max_depth = 8,
                 num_leaves = 15,
                 learning_rate = 0.01,
@@ -50,6 +48,12 @@ class ModelTraining:
                 )
 
             logging.info(f"model initialized with params : {params}")
+
+            artifact_dir = r'DS-Intern-Assignment-Shivam-Ghuge\artifacts'
+            os.makedirs(artifact_dir,exist_ok=True)
+            with open(os.path.join(artifact_dir,'params.json'),'w') as f:
+                json.dump(params,f,indent=4)
+                
         
         except Exception as e:
             raise CustomException(e,sys)

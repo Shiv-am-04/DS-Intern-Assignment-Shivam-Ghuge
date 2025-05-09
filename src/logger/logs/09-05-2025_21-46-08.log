@@ -1,8 +1,0 @@
-[ 2025-05-09 21:46:12,397 ] root - INFO - data splitted into train and test : [train_size:(11799, 29), test_size:(5058, 29)]
-[ 2025-05-09 21:46:12,920 ] root - INFO - train and test data saved to splited folder
-[ 2025-05-09 21:46:13,033 ] root - INFO - train and test data loaded
-[ 2025-05-09 21:46:13,035 ] root - INFO - KNN imputer initialized
-[ 2025-05-09 21:46:26,556 ] root - INFO - null values replaced with KNN imputer
-[ 2025-05-09 21:46:26,576 ] root - INFO - train and test data scaled using StandardScaler
-[ 2025-05-09 21:46:26,583 ] root - INFO - dataframe created with scaled values
-[ 2025-05-09 21:46:27,146 ] root - INFO - train and test data preprocessed and saved to preprocessed folder
