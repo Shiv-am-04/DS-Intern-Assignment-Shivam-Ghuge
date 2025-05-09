@@ -1,0 +1,6 @@
+[ 2025-05-09 23:49:36,947 ] matplotlib - DEBUG - matplotlib data path: C:\Users\SHIVAM GHUGE\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\mpl-data
+[ 2025-05-09 23:49:36,953 ] matplotlib - DEBUG - CONFIGDIR=C:\Users\SHIVAM GHUGE\.matplotlib
+[ 2025-05-09 23:49:36,954 ] matplotlib - DEBUG - interactive is False
+[ 2025-05-09 23:49:36,954 ] matplotlib - DEBUG - platform is win32
+[ 2025-05-09 23:49:37,055 ] root - INFO - model initialized with params : {'boosting_type': 'rf', 'max_depth': 8, 'num_leaves': 15, 'learning_rate': 0.01, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'importance_type': 'gain', 'bagging_fraction': 0.6, 'feature_fraction': 0.7}
+[ 2025-05-09 23:49:37,201 ] root - ERROR - The error occured in [C:\Users\SHIVAM GHUGE\Downloads\Mechademy Assignment\DS-Intern-Assignment-Shivam-Ghuge\src\components\model_training.py] at line 58] : Do not support special JSON characters in feature name.

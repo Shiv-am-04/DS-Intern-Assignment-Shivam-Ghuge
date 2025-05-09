@@ -1,0 +1,5 @@
+[ 2025-05-09 23:47:14,688 ] matplotlib - DEBUG - matplotlib data path: C:\Users\SHIVAM GHUGE\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\mpl-data
+[ 2025-05-09 23:47:14,706 ] matplotlib - DEBUG - CONFIGDIR=C:\Users\SHIVAM GHUGE\.matplotlib
+[ 2025-05-09 23:47:14,710 ] matplotlib - DEBUG - interactive is False
+[ 2025-05-09 23:47:14,710 ] matplotlib - DEBUG - platform is win32
+[ 2025-05-09 23:47:14,880 ] root - ERROR - The error occured in [C:\Users\SHIVAM GHUGE\Downloads\Mechademy Assignment\DS-Intern-Assignment-Shivam-Ghuge\src\components\model_training.py] at line 40] : LGBMRegressor.__init__() takes 1 positional argument but 11 were given
