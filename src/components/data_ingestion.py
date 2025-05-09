@@ -13,16 +13,22 @@ class DataIngestion:
 
         try:
             self.df = data
-            column = "timestamp"
-            self.df.drop(columns=column,inplace=True)
-            logging.info(f"{column} column removed successfully")
+            
+            # converting the datatype of some of features
+            col = [col for col in data.columns if data[col].dtype == 'object']
+            col.remove('timestamp')
+
+            for i in col:
+                self.df[i] = pd.to_numeric(self.df[i],errors='coerce')
+                
         except Exception as e:
             raise CustomException(e,sys)
 
     def split_data(self,test_size=0.3):
 
         try:
-            train,test = train_test_split(self.df,test_size=test_size,random_state=0)
+            self.df.sort_values(by='timestamp',inplace=True)
+            train,test = train_test_split(self.df,test_size=test_size,shuffle=False,random_state=0)
             logging.info(f"data splitted into train and test : [train_size:{train.shape}, test_size:{test.shape}]")
         except Exception as e:
             raise CustomException(e,sys)
@@ -32,10 +38,10 @@ class DataIngestion:
     def export_data(self,train:pd.DataFrame,test:pd.DataFrame):
 
         try:
-            path = 'DS-Intern-Assignment-Shivam-Ghuge\data\processed'
+            path = 'DS-Intern-Assignment-Shivam-Ghuge\data\splited'
             os.makedirs(path,exist_ok=True)
-            train.to_csv(os.path.join(path,'train.csv'))
-            test.to_csv(os.path.join(path,'test.csv'))
+            train.to_csv(os.path.join(path,'train.csv'),header=True,index=False)
+            test.to_csv(os.path.join(path,'test.csv'),header=True,index=False)
             logging.info(f"train and test data saved to {os.path.split(path)[-1]} folder")
         except Exception as e:
             raise CustomException(e,sys)

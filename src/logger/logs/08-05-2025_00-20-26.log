@@ -1,3 +1,0 @@
-[ 2025-05-08 00:20:29,324 ] root - INFO - timestamp removed successfully
-[ 2025-05-08 00:20:29,324 ] root - INFO - data splitted into train and test : [train_size:(11799, 28), test_size:(5058, 28)]
-[ 2025-05-08 00:20:29,778 ] root - INFO - train and test data saved to processed folder

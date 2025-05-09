@@ -1,0 +1,8 @@
+[ 2025-05-09 21:45:22,385 ] root - INFO - data splitted into train and test : [train_size:(11799, 29), test_size:(5058, 29)]
+[ 2025-05-09 21:45:22,867 ] root - INFO - train and test data saved to splited folder
+[ 2025-05-09 21:45:22,997 ] root - INFO - train and test data loaded
+[ 2025-05-09 21:45:22,997 ] root - INFO - KNN imputer initialized
+[ 2025-05-09 21:45:37,921 ] root - INFO - null values replaced with KNN imputer
+[ 2025-05-09 21:45:37,936 ] root - INFO - train and test data scaled using StandardScaler
+[ 2025-05-09 21:45:37,947 ] root - INFO - dataframe created with scaled values
+[ 2025-05-09 21:45:37,947 ] root - ERROR - The error occured in [C:\Users\SHIVAM GHUGE\Downloads\Mechademy Assignment\DS-Intern-Assignment-Shivam-Ghuge\src\components\data_preprocessing.py] at line 70] : Cannot save file into a non-existent directory: 'DS-Intern-Assignment-Shivam-Ghuge\data\preprocessed'
