@@ -6,7 +6,6 @@ from src.components.data_preprocessing import DataPreprocessing
 from src.components.feature_engineering import FeatureEngineering
 from src.components.anomaly_detection import AnomalyDetection
 from src.components.model_training import ModelTraining
-from src.components.model_evaluation import ModelEvaluation
 
 
 # reading raw data
@@ -47,3 +46,5 @@ X_train,X_test,y_train,y_test = ad.export_data()
 mt = ModelTraining(X_train,X_test,y_train,y_test)
 model = mt.model_training()
 mt.save_model(model_trained=model)
+
+
