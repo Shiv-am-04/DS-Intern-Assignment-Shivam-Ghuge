@@ -1,4 +1,4 @@
-## Your approach to the problem
+## Approach to the problem
 - First I have find the NaN values and removed them using KNN imputer.
 - After that I have start data preprocessing like scaling the features. I have scaled using sklearn's standard scaler.
 - There is a feature name timestamp which is important because energy consumption is calculated over time, just blindly removing it creates problem because it will be useful for the model to learn temporal dependancy.
@@ -20,4 +20,6 @@
 - Overall model provide very less error except some where error is very high.
 - 
 ## Recommendations for reducing equipment energy consumption
-
+- From the model and the features that influence the most for predicting target is machine operated in hours, atmospheric pressure, temprature and humidity of some zones 
+- This shows that using machinery by taking some break if it operates for continous hours can help the machinery to consume optimal energy just like humans after taking rest our productivity improves.
+- Outdoor temprature and humidity, wind speed, visibilty has nearly no influence.
